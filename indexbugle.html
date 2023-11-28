@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>News Site</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initPage()">
+
+    <header>
+        <h1 id="heading">Breaking News Today</h1>
+        <!-- <button id="login-button">Login</button>   -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">X</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <p><button type="submit" onclick="verifyCredentials()">Login</button></p>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    
+
+    <div id="main-story" class="story">
+        <h2>Main Story Title</h2>
+        <p>Main story content goes here...</p>
+    </div>
+
+    <section>
+        <h2>Latest Stories</h2>
+        <div id="candidateList" class="displayArea" onclick="fetchStory()">
+            <!-- Additional stories will be dynamically added here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Additional Stories</h2>
+        <div id="storyList" class="displayArea" onclick="fetchComments()">
+            <!-- Additional stories will be dynamically added here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Comments</h2>
+        <div id="commentList" class="displayArea">
+            <!-- Existing comments will be dynamically added here -->
+        </div>
+    
+        <form id="commentForm">
+            <label for="commentText">Leave a Comment:</label>
+            <textarea id="commentText" name="commentText" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="submit" onclick="submitComment()">Submit Comment</button>
+        </form>
+    </section>
+    
+    <section>
+        <h2>Advertisements</h2>
+        <div id="ads" class="displayArea" onclick="recordVoter('ads.ad_id')"> 
+            <!-- Advertisements will be dynamically added here -->
+        </div>
+    </section>
+
+    <div id="controls">
+        <button id="addBtn">[ Login ]</button>
+        <button id="showResults">[ Show Results ]</button>
+    </div>
+
+    <section>
+        <h2>Voters who have voted</h2>
+        <div id="completedBallots" class="displayArea">
+            <!-- Completed ballots will be dynamically added here -->
+        </div>
+    </section>
+
+    
+
+    <script src="buglecontrol.js"></script>
+</body>
+</html>
+
+
+
