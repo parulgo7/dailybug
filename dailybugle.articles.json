@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6563d352af3e77623f0a574b"
+  },
+  "title": "Introduction to TV Shows",
+  "teaser": "Love TV? Me too",
+  "body": "TV Shows are so great as a way to bond with friends.",
+  "date_created": {
+    "$date": "2023-11-26T15:30:00.000Z"
+  },
+  "date_last_edited": {
+    "$date": "2023-11-26T16:45:00.000Z"
+  },
+  "categories": [
+    "TV",
+    "Fun",
+    "Easy"
+  ],
+  "comments": [
+    {
+      "userId": "6563d352af3e77623f0a574d",
+      "comment": "Great introduction! I learned a lot.",
+      "dateCreated": {
+        "$date": "2023-11-26T17:00:00.000Z"
+      }
+    },
+    {
+      "userId": "6563d352af3e77623f0a574e",
+      "comment": "This really sucked",
+      "dateCreated": {
+        "$date": "2023-11-24T17:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6563f838af3e77623f0a576e"
+  },
+  "title": "Area 51? More like Area 5+1",
+  "teaser": "The time when we almost went to Area 51 in 2020",
+  "body": "Is Area 51 real? Is it not? Was 2020 real?",
+  "date_created": {
+    "$date": "2023-11-22T15:30:00.000Z"
+  },
+  "date_last_edited": {
+    "$date": "2023-11-23T16:45:00.000Z"
+  },
+  "categories": [
+    "Fantasy",
+    "Fun",
+    "Historical"
+  ],
+  "comments": [
+    {
+      "userId": "6563d151af3e77623f0a5742",
+      "comment": "Wow! What an informative article.",
+      "dateCreated": {
+        "$date": "2023-11-26T17:00:00.000Z"
+      }
+    },
+    {
+      "userId": "6563e698af3e77623f0a576a",
+      "comment": "This isn't real.",
+      "dateCreated": {
+        "$date": "2023-11-24T17:00:00.000Z"
+      }
+    }
+  ]
+}]

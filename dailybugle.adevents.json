@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "6563d690af3e77623f0a575d"
+  },
+  "ad_id": "6563d559af3e77623f0a5756",
+  "datecreated": {
+    "$date": "2023-11-26T18:15:00.000Z"
+  },
+  "userip": "192.168.1.100",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36",
+  "event_type": "click",
+  "user_id": {
+    "user_id": "6563d352af3e77623f0a574d",
+    "username": "Nat"
+  },
+  "article_id": {
+    "article_id": "6563d352af3e77623f0a574b",
+    "title": "Introduction to TV Shows"
+  }
+}]

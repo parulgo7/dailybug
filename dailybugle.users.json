@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6563d151af3e77623f0a5742"
+  },
+  "username": "Parul",
+  "password": "hotdog",
+  "author": false
+},
+{
+  "_id": {
+    "$oid": "6563d187af3e77623f0a5743"
+  },
+  "username": "Author",
+  "password": "pswd",
+  "author": true
+},
+{
+  "_id": {
+    "$oid": "6563d352af3e77623f0a574d"
+  },
+  "username": "Nat",
+  "password": "1234",
+  "author": false
+},
+{
+  "_id": {
+    "$oid": "6563d352af3e77623f0a574e"
+  },
+  "username": "reeya",
+  "password": "trip",
+  "author": false
+},
+{
+  "_id": {
+    "$oid": "6563e698af3e77623f0a576a"
+  },
+  "username": "Amisha",
+  "password": "butter",
+  "author": false
+}]

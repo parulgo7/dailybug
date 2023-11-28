@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6563d1caaf3e77623f0a5745"
+  },
+  "comment": "This is a sample comment.",
+  "dateCreated": {
+    "$date": "2023-11-26T12:00:00.000Z"
+  },
+  "userId": "123456789"
+}]
