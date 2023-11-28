@@ -104,14 +104,12 @@ async function getComments() {
 async function submitComments(){
 
 
-
     try {
         await client.connect();
-        await client.db('dailybugle').collection('adevents')
+        await client.db('dailybugle').collection('comments')
         .insertOne(userData)
         .then( results => response.send(results))
         .catch( error=> console.error(error));
-        console.log(`DID YOU GET TO ADEVENT`); 
     } catch (error) {
         console.error(error);
     } finally {

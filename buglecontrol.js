@@ -123,6 +123,9 @@ async function verifyCredentials() {
         if (result.success) {
             alert(`Authentication successful. Role: ${result.role}`);
             let result_role = `${result.role}`
+            if (result_role == "commenter"){
+                document.getElementById('commentForm').style.display = 'block';
+            }
             loadContent(viewType[result_role]); 
             console.log("i got past it"); 
             // Redirect or perform other actions based on the role
@@ -390,6 +393,16 @@ function loadContent(view) {
     for ( area of contentAreas) {
         area.innerHTML=""; // empty the containers for redrawing
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the 'ads' element
+        const adsElement = document.getElementById('ads');
+    
+        // Check the user role and hide the ads if the role is not the desired one
+        if (viewType['author'] === true) {
+            adsElement.style.display = 'none';
+        }
+    });
     
 
     switch (view) {
@@ -397,7 +410,8 @@ function loadContent(view) {
         case viewType['reader']: {
             fetchAndListCandidates(false); // STUB: include argument to show results
             fetchAndListVoters();
-            document.getElementById('commentForm').style.display = 'none';
+            document.getElementById('commentForm').style.visibility = 'hidden';
+            //document.getElementById('showResults').style.visibility = 'hidden';
             console.log("Do you get to reader view? "); 
             break;
         }
@@ -411,7 +425,7 @@ function loadContent(view) {
             console.log("HEYYYY I'M AN AUTHOR BABY"); 
             fetchAndListCandidates(false); // STUB: include argument to show results
             fetchAndListVoters();
-            //document.getElementById('commentForm').style.display = 'none';
+            document.getElementById('ads').style.visibility = 'hidden';
             break; 
         }
     }
@@ -534,7 +548,7 @@ async function submitComment() {
     const dataToSend = {"datecreated": formattedDate, "comment": commentText, "user_id": submittedUserID};
 
     console.log(dataToSend); 
-    let addVoter = await fetch( endpoint['ads'], //post is for adevents, not ads even though in ads
+    let addVoter = await fetch( endpoint['articles'], //post is for adevents, not ads even though in ads
     {
         method:'POST',
         headers: {
